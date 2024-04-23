@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de preços</title>
+
+    <style>
+        body {
+            background-color: #d9dcfc;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            text-align: center;
+
+
+        }
+
+        header {
+
+            text-align: center;
+            padding: 10px;
+            border: 20px;
+            margin: 10px;
+        }
+
+        .conteudo {
+           
+
+            .quantidade {
+                
+                background-color: white;
+                padding: 20px;
+                padding-left: 10px;
+                border: 10px;
+                margin: 50px;
+                border-radius: 10px;
+            }
+
+            .calcular button {
+                background-color: #7f83ba;
+                border: none;
+                color: black;
+                padding: 20px 30px;
+                font-size: 20px;
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 5px;
+
+
+
+            }
+
+            .calcular button:hover {
+                background-color:#aeb1f2;
+
+            }
+
+
+        }
+    </style>
+
+    <script>
+        function CalcularPreco() {
+            let quanti = parseFloat(document.getElementById("quantil").value);
+            let preco = parseFloat(document.getElementById("precol").value);
+            let precoFinal = quanti * preco;
+            document.getElementById("precoF").value = precoFinal.toFixed(2);
+        } 
+    </script>
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1 id="titulo"> Calcule o preço total dos livros! </h1>
+    </header>
+
+    <main>
+
+        <div class="conteudo">
+
+            <div class="quantidade">
+
+                <h2 id="quanti"> Quantidade de livros:</h2>
+                <input id="quantil" type="text">
+
+                <h2 id="preco">Preço por livro:</h2>
+                <input id="precol" type="text">
+
+                <h2 id="precoFinal"> Preço final: </h2>
+                <input id="precoF" type="text" disabled>
+
+            </div>
+
+            <div class="calcular">
+                <button onclick="CalcularPreco()"> Calcular </button>
+
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
